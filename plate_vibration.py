@@ -21,6 +21,34 @@ def swap_arr(array):
     return array
 
 
+def make_graph(array):
+    zgrid = np.array(array)
+    xgrid = np.array([
+        [0, 1, 2, 3, 4, 5, 6],
+        [0, 1, 2, 3, 4, 5, 6],
+        [0, 1, 2, 3, 4, 5, 6],
+        [0, 1, 2, 3, 4, 5, 6],
+        [0, 1, 2, 3, 4, 5, 6],
+        [0, 1, 2, 3, 4, 5, 6],
+        [0, 1, 2, 3, 4, 5, 6]
+    ])
+    ygrid = np.array([
+        [0, 0, 0, 0, 0, 0, 0],
+        [1, 1, 1, 1, 1, 1, 1],
+        [2, 2, 2, 2, 2, 2, 2],
+        [3, 3, 3, 3, 3, 3, 3],
+        [4, 4, 4, 4, 4, 4, 4],
+        [5, 5, 5, 5, 5, 5, 5],
+        [6, 6, 6, 6, 6, 6, 6]
+    ])
+    fig = pylab.figure()
+    axes = Axes3D(fig)
+    axes.plot_surface(xgrid, ygrid, zgrid, cmap=cm.viridis)
+    axes.set_zlim(-5, 5)
+    filename = f'graph{counter}'
+    pylab.savefig(filename, bbox_inches='tight')
+
+
 array = [
     [
         [0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00],

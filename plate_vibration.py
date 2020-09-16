@@ -82,3 +82,12 @@ array = [
 a = 10
 s = 0.003
 h = 0.1
+counter = 0
+flag = True
+while flag:
+    array = modify_last_arr(array, a, h, s)
+    array = swap_arr(array)
+    make_graph(array[2])
+    counter += 1
+    if counter >= 25:
+        flag = False

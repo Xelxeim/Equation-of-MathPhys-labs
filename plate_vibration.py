@@ -1,3 +1,20 @@
+def modify_last_arr(array, a, h, s):
+    for j in range(1, 6):
+        for k in range(1, 6):
+            array[2][j][k] = (a ** 2) * (s ** 2) * (array[1][j][k + 1] + array[1][j][k - 1] + array[1][j + 1][k] + \
+                                                    array[1][j - 1][k] - 4 * array[1][j][k]) / (h ** 2) + 2 * \
+                             array[1][j][k] - array[0][j][k]
+    return array
+
+
+def swap_arr(array):
+    for j in range(1, 6):
+        for k in range(1, 6):
+            array[0][j][k] = array[1][j][k]
+            array[1][j][k] = array[2][j][k]
+    return array
+
+    
 array = [
     [
         [0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00],

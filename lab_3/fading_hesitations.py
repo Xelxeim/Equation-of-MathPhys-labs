@@ -43,3 +43,12 @@ while True:
 for i in range(iterations):
     array.append(count_values(mode, t, x1, y1, x, y, p))
     t,x2,y2,x1,y1,x,y = count_values(mode, t, x1, y1, x, y, p)
+
+array = np.array(array)
+xarr = array[:,5]
+yarr = array[:,6]
+plt.xlabel("x")
+plt.ylabel("y")
+plt.grid()
+plt.plot(xarr, yarr)
+plt.show()

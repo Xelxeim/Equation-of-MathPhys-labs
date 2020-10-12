@@ -46,8 +46,6 @@ if os.path.exists('frames'):
     pass
 else: os.mkdir('frames')
 save_path = os.path.abspath('frames')
-print(save_path)
-
 
 def modify_last_arr(array):
     for j in range(1, 6):
